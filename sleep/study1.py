@@ -1,0 +1,10 @@
+li=[11,22,33,'aa','bb','cc']
+print(li)
+li.insert(-1,'qq')
+li.extend(['kk','aa','ii'])
+ri=li.pop()
+li.reverse()
+li.remove('aa')
+li[3]=0
+print(ri)
+print(li)
