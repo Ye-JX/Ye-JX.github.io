@@ -1,0 +1,25 @@
+cap.read()
+ 返回两个参数赋给两个值。第一个参数ret的值为True或False，代表有没有读到图片。第二个参数是frame，是当前截取一帧的图片。
+
+ord()
+ 函数是 chr() 函数（对于8位的ASCII字符串）或 unichr() 函数（对于Unicode对象）的配对函数，它以一个字符（长度为1的字符串）作为参数，返回对应的 ASCII 数值，或者 Unicode 数值，如果所给的 Unicode 字符超出了你的 Python 定义范围，则会引发一个 TypeError 的异常。
+ 
+waitKey()
+ 1.waitKey()与waitKey(0)，都代表无限等待，waitKey函数的默认参数就是int delay = 0，故这俩形式本质是一样的。
+ 2.waitKey(n)，等待n毫秒后，关闭显示的窗口。
+
+absdiff 获取差分图 就是将两幅图像作差
+ cv2.absdiff(src1,src2,[dst])
+ 两个图片相减，这里用的是灰度图，类型是uint8
+ 在 OpenCV单通道使用的数据类型是 uint8，
+ 两个uint8的数相减得不到负数,会得到差的补码
+
+cv2.threshold()函数的作用是将一幅灰度图二值化
+ 上面代码的作用是，将灰度图img2gray中灰度值小于175的点置0，灰度值大于175的点置255
+ 具体用法如下：threshold(src, thresh, maxval, type[, dst])->ret,dst
+ src:：灰度图
+ thresh：阈值
+ axval：最大值
+ type：阈值类型
+ 对于最后一个参数，常见的阈值类型有：
+ THRESH_BINARY=0,THRESH_BINARY_INV,THRESH_TRUNC,THRESH_TOZERO,THRESH_TOZERO_INV,THRESH_OTSU,THRESH_TRIANGLE,THRESH_MASK
