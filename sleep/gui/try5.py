@@ -1,3 +1,5 @@
-import tkinter
-top=tkinter.Tk()
+from tkinter import *
+top=Tk(className="LookING~~")
+text=Text()
+text.pack()
 top.mainloop()
